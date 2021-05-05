@@ -1,0 +1,32 @@
+*{
+  background-color:rgb(255, 255, 255);
+}
+
+.Buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deck{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placep1{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.text{
+  margin: 20px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,25 @@
+.button {
+    font-size: 30px;
+    width: 5vw;
+    height: 3vh;
+    padding: 30px 90px;
+    text-decoration: none;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    overflow: hidden;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 2vh;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: rgba(255, 186, 140, 0.76);
+    opacity: 0.9;
+    transition: 1.2s;
+}
