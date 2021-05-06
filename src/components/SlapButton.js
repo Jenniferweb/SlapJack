@@ -1,6 +1,7 @@
 import Button from './Button';
 
-export default function SlapButton({ gameDeck, setGameDeck, playerCards, setPlayerCards, setValue, setP1Turn, p1Turn, value, text }) {
+export default function SlapButton({ setNumCardsPlaced, gameDeck, setGameDeck, playerCards, setPlayerCards,
+    setValue, setP1Turn, p1Turn, value, text }) {
 
     return (
         <Button onClick={() => {
@@ -18,12 +19,13 @@ export default function SlapButton({ gameDeck, setGameDeck, playerCards, setPlay
                 || (gameDeck.cards[gameDeck.cards.length - 1].Value === gameDeck.cards[gameDeck.cards.length - 2].Value)
                 || ((gameDeck.cards.length >= 3) && gameDeck.cards[gameDeck.cards.length - 1].Value === gameDeck.cards[gameDeck.cards.length - 3].Value)) {
 
-                playerCards.cards = playerCards.cards.concat(gameDeck.cards);
+                playerCards.cards = gameDeck.cards.concat(playerCards.cards);
                 gameDeck.cards = [];
                 setGameDeck(gameDeck);
                 setPlayerCards(playerCards);
                 console.log('good slap');
                 setP1Turn(p1Turn);
+                setNumCardsPlaced(0);
                 setValue(value + 1);
             }
 
